@@ -5,7 +5,7 @@ require_relative 'restaurants/NaPurkynce'
 class MenuController < ApplicationController
 
   def initialize
-  	super
+    super
     @restaurants = [
       UDvouKosu.new,
       LiquidBread.new,

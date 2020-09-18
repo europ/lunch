@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Menus</h1>
+
+<% @menus.each do |menu| -%>
+	<b><%= menu[:url] %></b> <br>
+    <%= menu[:content] %> <br>
+    <br>
+<% end -%>

@@ -10,8 +10,10 @@ class UDvouKosu
 
   def load
     {
+      id: self.class.to_s,
+      name: self.class.to_s.gsub(/([A-Z])/, ' \1').strip,
       url: @url,
-      content: scrape
+      content: parse(scrape)
     }
   end
 
@@ -19,5 +21,10 @@ class UDvouKosu
     page = Nokogiri::HTML.parse(RestClient.get(@url))
 
     page.css(@css_selector).text
+  end
+
+  def parse(text)
+    keywords = ["Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek"]
+    text.gsub(/(#{keywords.join("|")})/, "\n\n\\1")
   end
 end

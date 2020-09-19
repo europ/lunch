@@ -2,8 +2,21 @@
 
 <h1>Menus</h1>
 
-<% @menus.each do |menu| -%>
-	<b><%= menu[:url] %></b> <br>
-    <%= menu[:content] %> <br>
-    <br>
-<% end -%>
+<div id="accordion">
+  <% @menus.each do |menu| -%>
+    <div class="card">
+      <div class="card-header" id="heading<%= menu[:id] %>">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapse<%= menu[:id] %>" aria-expanded="true" aria-controls="collapse<%= menu[:id] %>">
+            <%= simple_format(menu[:name]) %>
+          </button>
+        </h5>
+      </div>
+      <div id="collapse<%= menu[:id] %>" class="collapse" aria-labelledby="heading<%= menu[:id] %>" data-parent="#accordion">
+        <div class="card-body">
+          <%= simple_format(menu[:content]) %>
+        </div>
+      </div>
+    </div>
+  <% end -%>
+</div>

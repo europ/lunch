@@ -1,5 +1,5 @@
-require 'open-uri'
 require 'nokogiri'
+require 'restclient'
 
 class LiquidBread
 
@@ -16,7 +16,7 @@ class LiquidBread
   end
 
   def scrape
-    page = Nokogiri::HTML.parse(URI(@url).open)
+    page = Nokogiri::HTML.parse(RestClient.get(@url))
 
     page.css(@css_selector).text
   end

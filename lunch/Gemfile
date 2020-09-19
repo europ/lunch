@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # My custom gems
+gem 'rest-client'
+gem 'sprockets', '~> 3.7.2'
 gem 'nokogiri'
 gem 'bootstrap-sass'
 gem 'bootstrap-generators'

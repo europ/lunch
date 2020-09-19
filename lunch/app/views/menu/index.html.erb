@@ -1,14 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Menus</h1>
-
 <div id="accordion">
   <% @menus.each do |menu| -%>
-    <div class="card">
+    <div class="card mb-1 bg-light">
       <div class="card-header" id="heading<%= menu[:id] %>">
         <h5 class="mb-0">
           <button class="btn btn-link" data-toggle="collapse" data-target="#collapse<%= menu[:id] %>" aria-expanded="true" aria-controls="collapse<%= menu[:id] %>">
-            <%= simple_format(menu[:name]) %>
+            <%= menu[:name] %>
           </button>
         </h5>
       </div>

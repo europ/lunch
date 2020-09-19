@@ -1,12 +1,4 @@
 ### Setup
 
-```sh
-# build
-docker build -t lunch .
-
-# run
-docker run --rm -d -p 3000:3000 lunch
-
-# log
-docker logs -f <CONTAINER_ID>
-```
+1. run `docker-compose up -d`
+2. open http://172.17.0.2:3000/

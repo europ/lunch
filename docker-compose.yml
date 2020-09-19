@@ -1,6 +1,10 @@
-lunch:
-  build: .
-  ports:
-    - "3000:3000"
-  dns:
-    - "1.1.1.1"
+version: '3.7'
+services:
+  lunch:
+    build: .
+    ports:
+      - '80:80'
+    dns:
+      - '1.1.1.1'
+    expose:
+      - '80'

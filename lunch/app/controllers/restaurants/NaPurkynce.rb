@@ -4,7 +4,7 @@ require 'restclient'
 class NaPurkynce
 
   def initialize
-    @url = 'http://www.napurkynce.cz/daily-menu/'
+    @url = 'http://www.napurkynce.cz/denni-menu/'
     @css_selector = '#content'
   end
 

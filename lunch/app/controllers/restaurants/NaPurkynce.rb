@@ -11,7 +11,7 @@ class NaPurkynce
   def load
     {
       id: self.class.to_s,
-      name: self.class.to_s.gsub(/([A-Z])/, ' \1').strip,
+      name: 'Na Purkyňce',
       url: @url,
       content: parse(scrape)
     }

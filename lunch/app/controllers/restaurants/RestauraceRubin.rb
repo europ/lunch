@@ -1,17 +1,17 @@
 require 'nokogiri'
 require 'restclient'
 
-class UDvouKosu
+class RestauraceRubin
 
   def initialize
-    @url = 'https://udvoukosu.webs.com/j-deln-l-stek'
-    @css_selector = '.webs-module-text'
+    @url = 'http://restauracerubin.cz/'
+    @css_selector = 'div.container:nth-child(3)'
   end
 
   def load
     {
       id: self.class.to_s,
-      name: 'U dvou kosů',
+      name: 'Restaurace Rubín',
       url: @url,
       content: parse(scrape)
     }
@@ -24,7 +24,6 @@ class UDvouKosu
   end
 
   def parse(text)
-    keywords = ["Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek"]
-    text.gsub(/(#{keywords.join("|")})/, "\n\n\\1")
+    text.delete("\r").gsub(/[ ]+/, " ").gsub(/(\n )+/, "\n").gsub(/\n+/, "\n")
   end
 end

@@ -35,6 +35,7 @@ gem 'nokogiri'
 gem 'bootstrap-sass'
 gem 'bootstrap-generators'
 gem 'jquery-rails'
+gem 'require_all'
 
 gem 'pry'
 gem 'pry-byebug'

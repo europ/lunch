@@ -1,15 +1,19 @@
-require_relative 'restaurants/UDvouKosu'
-require_relative 'restaurants/LiquidBread'
-require_relative 'restaurants/NaPurkynce'
+require 'require_all'
+
+require_rel 'restaurants'
 
 class MenuController < ApplicationController
 
   def initialize
     super
+
     @restaurants = [
-      UDvouKosu.new,
       LiquidBread.new,
-      NaPurkynce.new
+      NaPoliBistro.new,
+      NaPurkynce.new,
+      RestauraceAPizzerieNaPlace.new,
+      RestauraceRubin.new,
+      UDvouKosu.new
     ]
   end
 

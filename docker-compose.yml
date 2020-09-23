@@ -1,10 +1,19 @@
 version: '3.7'
 services:
+
   lunch:
-    build: .
-    ports:
-      - '80:80'
+    build:
+      dockerfile: ./docker/rails/Dockerfile
+      context: .
+    restart: always
     dns:
       - '1.1.1.1'
-    expose:
-      - '80'
+
+  nginx:
+    build:
+      dockerfile: ./docker/nginx/Dockerfile
+      context: .
+    restart: always
+    ports:
+      - 80:80
+      - 443:443

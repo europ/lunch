@@ -24,8 +24,5 @@ RUN bundle install
 ADD ./lunch $APP_HOME
 RUN yarn install --check-files
 
-# uncover port
-EXPOSE 80
-
-# run
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0", "-p", "80"]
+# run on localhost
+CMD ["bundle", "exec", "rails", "server", "-p", "3000"]

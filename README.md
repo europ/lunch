@@ -1,6 +1,10 @@
 # Lunch
 
-Daily menu scraper and visualizer built on top of ruby on rails.
+Daily menu scraper and visualizer built on top of ruby on rails hosted in a container behind a reverse proxy container provided by nginx.
+
+### Schema
+
+![schema.png](.other/schema.png)
 
 ### Prerequisities
 
@@ -9,10 +13,4 @@ Daily menu scraper and visualizer built on top of ruby on rails.
 
 ### Setup
 
-1. run `docker-compose up -d`
-    * add `--build` option to rebuild the docker image
-1. get container IP
-    1. run `docker ps`
-    1. run `docker inspect <CONTAINER ID>`
-    1. look for `IPAddress`
-1. open `http://<IPAddress>/`
+TODO

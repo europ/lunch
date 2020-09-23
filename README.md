@@ -8,9 +8,7 @@ Daily menu scraper and visualizer built on top of ruby on rails hosted in a cont
 
 ### Prerequisities
 
+* domain name
+* SSL certificate
 * [docker-compose](https://docs.docker.com/compose)
     * [docker](https://docs.docker.com/engine)
-
-### Setup
-
-TODO

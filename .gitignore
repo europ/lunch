@@ -2,6 +2,3 @@
 
 proxy/certs/*
 !proxy/certs/.gitkeep
-
-proxy/conf.d/*
-!proxy/conf.d/.gitkeep

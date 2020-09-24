@@ -19,14 +19,13 @@ ENV APP_HOME /app
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
-# ruby gems
-RUN gem install bundler
-ADD ./lunch/Gemfile* $APP_HOME/
-RUN bundle install
-
 # application
 ADD ./lunch $APP_HOME
-RUN yarn install --check-files
+RUN gem install bundler \
+	&& \
+	bundle install \
+	&& \
+	yarn install --check-files
 
 # run
 CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0", "-p", "3000"]

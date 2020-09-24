@@ -2,6 +2,7 @@ version: '3.7'
 services:
 
   lunch:
+    container_name: lunch
     build:
       dockerfile: ./docker/rails/Dockerfile
       context: .
@@ -10,6 +11,7 @@ services:
       - '1.1.1.1'
 
   nginx:
+    container_name: nginx
     build:
       dockerfile: ./docker/nginx/Dockerfile
       context: .

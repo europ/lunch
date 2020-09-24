@@ -38,6 +38,15 @@ Instructions how to launch locally rails application only.
 
 It is recommended to use [rbenv/rbenv](https://github.com/rbenv/rbenv) with [rbenv/ruby-build](https://github.com/rbenv/ruby-build).
 
+For instructions using docker-compose:
+
+| software       | version  |
+| -------------- | -------- |
+| docker         | 19.03.13 |
+| docker-compose | 1.26.1   |
+
+For instructions using ruby:
+
 | software | version |
 | -------- | ------- |
 | ruby     | 2.7.1   |
@@ -46,6 +55,14 @@ It is recommended to use [rbenv/rbenv](https://github.com/rbenv/rbenv) with [rbe
 | rails    | 6.0.3.3 |
 
 #### Instructions
+
+Using docker-compose:
+
+1. run `docker-compose up -d lunch`
+1. find the container's IP address via `docker inspect lunch | sed -nr 's/^\s*"IPAddress": "([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)",$/\1/p'`
+1. visit `http://IP:3000`
+
+Using ruby:
 
 1. change directory to lunch via `cd lunch`
 1. install dependencies via `bundle install`

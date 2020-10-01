@@ -24,9 +24,9 @@ Instructions how to host this multicontainer application on a server with a spec
 1. configure enviroment
     1. run `cp .env.example .env`
     1. add your domain name to `.env` file
-1. add your SSL certificate files to `proxy/conf.d/`
-    * add your CRT file as `lunch.crt`(`proxy/conf.d/lunch.crt`)
-    * add your KEY file as `lunch.key`(`proxy/conf.d/lunch.key`)
+1. add your SSL certificate files to `proxy/certs/`
+    * add your CRT file as `lunch.crt`(`proxy/certs/lunch.crt`)
+    * add your KEY file as `lunch.key`(`proxy/certs/lunch.key`)
 1. build the application via `docker-compose build`
 1. start the application via `docker-compose up -d`
 
